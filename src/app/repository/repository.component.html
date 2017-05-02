@@ -1,0 +1,35 @@
+<br>
+<br>
+<label>Enter the Project Name:</label>
+
+
+<br><br>
+<input type="text" #userName class="">
+<br><br>
+<button type="button" class="btn btn-lg btn-info" (click)="onClick(userName.value)">
+				Submit
+			</button><br><br>
+<div *ngIf="buttonStatus">
+
+
+	<!-- <h5 align="center">{{userDa<trta.total_count}} Repositories Available.</h5> -->
+	<h3 align="center"> Repository Information</h3>
+	<marquee><h5 align = "center">Total Repos are = {{total}}</h5></marquee>
+		<table class="table table-striped">
+		<thead>
+<tr>
+	<th>Name</th>
+	<th>Id</th>
+</tr>
+
+		</thead>
+<tbody>
+	<tr *ngFor="let item of userData">
+		<td>{{item.name}}</td>
+		<td>{{item.id}}</td>
+	</tr>
+</tbody>
+
+	</table>
+
+</div>
